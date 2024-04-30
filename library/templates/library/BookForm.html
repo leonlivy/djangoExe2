@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{%if form.instance.pk%}Edit Book{%else%}ADD new Book{%endif%}</title>
+</head>
+<body>
+    <h1>{%if form.instance.pk%}Edit book{%else%}Add new book{%endif%}</h1>
+        <form method ='post'>
+            {%csrf_token%}
+            {{form.as_p}}
+            <buttom type="submit">Save</buttom>
+        </form>
+</body>
+</html>
